@@ -1,0 +1,13 @@
+name: rundeck-mcollective-nodes-plugin
+version: 1.0
+rundeckPluginVersion: 1.0
+author: Chuck Scott
+date: 9/14/2012
+providers:
+    - name:  rundeck-mcollective-nodes-resource-provider
+      service: ResourceModelSource
+      plugin-type: script
+      script-interpreter: /usr/bin/ruby
+      script-file: generate.rb
+      script-args: mco rpc rpcutil -j inventory
+      resource-format: resourcexml
