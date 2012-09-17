@@ -22,7 +22,9 @@ in order for this plugin to function, the MCollective Client must be installed a
 See the following regarding mcollective and optional mongodb support:
 
 http://docs.puppetlabs.com/mcollective/reference/basic/gettingstarted.html
+
 http://docs.puppetlabs.com/mcollective/reference/plugins/registration.html
+
 http://projects.puppetlabs.com/projects/mcollective-plugins/wiki/AgentRegistrationMongoDB
 
 Additionally, json/ruby support must exist, which is needed to transform derived json data to resourcexml format.
