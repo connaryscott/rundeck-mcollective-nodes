@@ -7,11 +7,11 @@ This plugin will make use of an underlying MCollective Installation by exploitin
 
 The interface currently implemented is:
 
-   mco rpc rpcutil -j inventory
+    mco rpc rpcutil -j inventory
 
 Optionally if mongodb is supported, the following may be used which shall significantly increase performance when generating the reosurce model:
 
-   mco rpc --dm mongo rpcutil -j inventory
+    mco rpc --dm mongo rpcutil -j inventory
 
 in order for this plugin to function, the MCollective Client must be installed, for example the mco utility is owned by the mcollective-client rpm package:
 
@@ -20,10 +20,10 @@ in order for this plugin to function, the MCollective Client must be installed, 
 
 Additionally, json/ruby support must exist, which is typically provided by the ruby json gem and installed/verified like so:
 
-   [chuck@stubhub-centos62-64-vm6]$   sudo gem install json
+    [chuck@stubhub-centos62-64-vm6]$   sudo gem install json
 
-   [chuck@stubhub-centos62-64-vm6]$   gem list json
-   *** LOCAL GEMS ***
-   json (1.7.5)
+    [chuck@stubhub-centos62-64-vm6]$   gem list json
+    *** LOCAL GEMS ***
+    json (1.7.5)
 
 Other assumptions are made that is consistent with an MCollective Installation  and optional MongoDB Support
