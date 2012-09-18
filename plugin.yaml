@@ -1,5 +1,5 @@
 name: rundeck-mcollective-nodes-plugin
-version: 1.0
+version: 1.1
 rundeckPluginVersion: 1.0
 author: Chuck Scott
 date: 9/14/2012
@@ -11,3 +11,10 @@ providers:
       script-file: generate.rb
       script-args: mco rpc rpcutil -j inventory
       resource-format: resourcexml
+      config:
+         - type: String
+           name: mco_command_line
+           title:  mcollective client utility command line
+           description: the command line used to produce node resource json data
+           required: true
+           default:  mco rpc --dm mongo rpcutil -j inventory

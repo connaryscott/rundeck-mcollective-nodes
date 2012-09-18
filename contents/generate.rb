@@ -3,16 +3,14 @@
 require 'rubygems'
 require 'json'
 
-if ARGV.length == 0
-   $stderr.puts "no mco commandline provided, nothing to execute"
+
+if ENV['RD_CONFIG_MCO_COMMAND_LINE'] == nil
+   $stderr.puts "no RD_CONFIG_MCO_COMMAND_LINE environment provided, check mco_command_line plugin configuration property"
    exit 1
 end
 
-# example mco command line
-#f = IO.popen("mco rpc rpcutil -j inventory")
-#
 
-cmdLine=ARGV.join(" ")
+cmdLine=ENV['RD_CONFIG_MCO_COMMAND_LINE']
 f = IO.popen(cmdLine)
 json=f.readlines.to_s
 f.close
